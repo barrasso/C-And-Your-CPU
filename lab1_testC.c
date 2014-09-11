@@ -160,8 +160,11 @@ main()
       // Decrement count
       countB--;
   }
-  // Print Output of b array
-  printf("\nb[]: %d %d %d %d %d %d %d %d %d %d \n",
+  // Print input of b[] array from a[] array
+  printf("\nArray reversal using array indicies:\nb[] input from a[]: %d %d %d %d %d %d %d %d %d %d",
+               a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9]);
+  // Print Output of b[] array
+  printf("\nb[] OUTPUT: %d %d %d %d %d %d %d %d %d %d \n",
                b[0], b[1], b[2], b[3], b[4], b[5], b[6], b[7], b[8], b[9]);
         
         
@@ -179,8 +182,11 @@ main()
       // Decrement count
       countC--;
   }
-  // Print output of c array
-  printf("\nc[]: %d %d %d %d %d %d %d %d %d %d \n",
+  // Print input of c[] array from a[] array
+  printf("\nArray reversal using pointers:\nc[] input from a[]: %d %d %d %d %d %d %d %d %d %d",
+           a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9]);
+  // Print output of c[] array
+  printf("\nc[] OUTPUT: %d %d %d %d %d %d %d %d %d %d \n",
            c[0], c[1], c[2], c[3], c[4], c[5], c[6], c[7], c[8], c[9]);
     
 
