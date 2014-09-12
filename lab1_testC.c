@@ -26,6 +26,7 @@ main()
   int j, k;
 
   char AString[] = "HAL";           // 8
+  char ascii;
 
   // 1 -- change "World" to your name
   printf("\n\n PART 1 ---------\n");
@@ -193,26 +194,40 @@ main()
   // 8 -- strings
   printf("\n\n PART 8 ----------\n");
 
+  // Print out string
   printf("\n %s \n", AString);
-
-  // NEW CODE
-  for (k = 0; k < 4; k++) printf("\n %d", AString[k]);
-
+    
+  // Loop through string and print ASCII values of characters
+  for (int i = 0; i < sizeof(AString); i++) {
+      // Set ascii to current letter
+      ascii = AString[i];
+      // Print int value of character
+      printf("\nchar: %i",ascii);
+  }
+  // Last byte's value is 0 because the string array always holds a null value
+    
+  // Adding 1 to each char in the string
   for (k = 0; k < 3; k++) AString[k] += 1;
-  printf("\n My name is %s. \n", AString);
+  printf("\n\nAdding 1 to each char gives: My name is %s. \n", AString);
 
+  // Adding 60 to the last char in the string gives a '<' character
   AString[3] += 60;
-  printf("\n %s \n", AString);
+  printf("\nAdding 60 to last byte gives: %s \n", AString);
 
-  for (k = 0; k < 10; k++) printf("\n %d", AString[k]);
 
   // 9 -- address calculation
-  for (k = 0; k < 10; k++) b[k] = a[k];         // direct reference to array element
+  for (k = 0; k < 10; k++) {
+      b[k] = a[k];         // direct reference to array element
+      printf("\n1st Output: %d",b+k);
+  }
 
   ip = a;
   ip2 = b;
-  for (k = 0; k < 10; k++) *ip2++ = *ip++;     // indirect reference to array element
+  for (k = 0; k < 10; k++) {
+      printf("\n2nd Output: %d",ip2);
+      *ip2++ = *ip++;     // indirect reference to array element
+  }
 
   // all done
-  printf("\n\n ALL DONE\n");
+  printf("\n\nALL DONE\n");
 }
